@@ -49,6 +49,21 @@ but things change so rapidly. When you have an issue, know what it does so you c
 
 > time is better spent write better tests, don't spend too much time learning how to do configuration.
 
+## Testing,
+why do we need tests?
+As more devs join the team you need to make sure you don't break other teams hard work and things function as they initially did.
+
+growing product makes giant monster harder to maintain.
+
+Testing helps us to make sure parts of code work properly.
+
+it covers code so you don't introduce bugs in production.
+
+## Mistakes while testing?
+long run, writing tests help you avoid bugs in long term.
+
+
+
 
 
 
