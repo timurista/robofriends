@@ -10,15 +10,14 @@ class Header extends Component {
   }
 
   shouldComponentUpdate(nextState) {
-    if (this.this.state.count !== nextState.count) {
+    if (this.state.count !== nextState.count) {
       return true
     }
     return false;
   }
   render() {
-    console.log('CounterButton')
     return (
-      <button color={this.props.color} onClick={this.updateCount}>
+      <button data-test-id="counter-button" color={this.props.color} onClick={this.updateCount}>
         Count: {this.state.count}
       </button>
     )
