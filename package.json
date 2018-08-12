@@ -23,6 +23,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0",
     "stylelint-config-recommended": "^2.1.0"
   }
 }
