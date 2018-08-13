@@ -5,6 +5,8 @@ import {
   REQUEST_ROBOTS_FAILED,
 } from './constants';
 
+import apiFetch from './api-fetch';
+
 export const setSearchField = (text) => ({
   type: CHANGE_SEARCH_FIELD,
   payload: text,
@@ -12,8 +14,7 @@ export const setSearchField = (text) => ({
 
 export const requestRobots = () => (dispatch) => {
   dispatch({ type: REQUEST_ROBOTS_PENDING });
-  fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
+  return apiFetch('https://jsonplaceholder.typicode.com/users')
     .then(users => dispatch({ 
       type: REQUEST_ROBOTS_SUCCESS, 
       payload: users,
