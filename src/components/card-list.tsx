@@ -1,5 +1,5 @@
-import React from 'react'
-import Card from '../components/card';
+import * as React from 'react'
+import Card from './card';
 
 const CardList = ({ robots }) => {
   return (

@@ -1,9 +1,19 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { connect } from 'react-redux';
 import MainPage from '../components/main-page';
 import { setSearchField, requestRobots } from '../actions';
 
-export class App extends Component {
+interface Props {
+  onRequestRobots: any;
+  onSearchChange: any;
+  isPending: boolean;
+  error: string;
+  robots: any;
+  searchField: string;
+};
+type State = any;
+
+export class App extends React.Component<Props, State> {
   render() {
     return <MainPage {...this.props} />
   }
