@@ -1,7 +1,7 @@
-import React,  { Component } from 'react'
+import * as React from 'react'
 import CounterButton from './counter-button';
 
-class Header extends Component {
+class Header extends React.Component {
   shouldComponentUpdate() {
     return false;
   }

@@ -1,11 +1,20 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import CardList from './card-list';
 import Scroll from './scroll';
 import Header from './header';
 import SearchBox from './search-box';
 import ErrorBoundary from './error-boundary';
 
-class MainPage extends Component {
+interface Props {
+  onRequestRobots: any;
+  onSearchChange: any;
+  isPending: boolean;
+  error: string;
+  robots: any;
+  searchField: string;
+}
+
+class MainPage extends React.Component<Props> {
 
   componentDidMount() {
     this.props.onRequestRobots();

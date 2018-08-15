@@ -1,6 +1,12 @@
-import React,  { Component } from 'react'
+import * as React from 'react'
 
-class Header extends Component {
+type Props = any;
+
+type State = {
+  count: number;
+}
+
+class Header extends React.Component<Props, State> {
   state = {
     count: 0,
   }

@@ -1,4 +1,4 @@
-import * as actions from './';
+import * as actions from '.';
 import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 
