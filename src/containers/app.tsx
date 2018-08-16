@@ -3,18 +3,25 @@ import { connect } from 'react-redux';
 import MainPage from '../components/main-page';
 import { setSearchField, requestRobots } from '../actions';
 
-interface Props {
-  onRequestRobots: any;
-  onSearchChange: any;
+export interface IRobot {
+  name: string;
+  id: number;
+  email: string;
+  username: string;
+}
+
+export interface Props {
+  onRequestRobots: () => void;
+  onSearchChange: (event: React.SyntheticEvent<HTMLInputElement>) => void;
   isPending: boolean;
   error: string;
   robots: any;
   searchField: string;
 };
-type State = any;
+type State = {};
 
 export class App extends React.Component<Props, State> {
-  render() {
+  render(): JSX.Element {
     return <MainPage {...this.props} />
   }
 }
