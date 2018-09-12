@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`CounterButton component CounterButton component exists 1`] = `
-"<button data-test-id=\\"counter-button\\" color={[undefined]} onClick={[Function]}>
-  Count: 
-  0
-</button>"
-`;
