@@ -1,6 +1,5 @@
 version: 2
 jobs:
-  
   build:
     docker:
       - image: circleci/node:7.10
@@ -15,7 +14,8 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run: yarn install
-      - run: CI=true yarn build
+      - run: echo "building"
+      # - run: CI=true yarn build
       - save_cache:
           paths:
             - node_modules
@@ -28,8 +28,11 @@ jobs:
       - run: yarn install
       - run: echo "testing... FIX MY TESTS"
   hithere:
-    - checkout
-    - run: echo "hello finsihed after testing"
+    docker:
+      - image: circleci/node:8.9
+    steps:
+      - checkout
+      - run: echo "hello finsihed after testing"
 
 workflows:
   version: 2
@@ -38,5 +41,5 @@ workflows:
       - build
       - hithere
       - test:
-        requires:
-          - hithere
+          requires:
+            - hithere
