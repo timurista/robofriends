@@ -1,6 +1,5 @@
 version: 2
 jobs:
-  
   build:
     docker:
       - image: circleci/node:7.10
@@ -28,8 +27,11 @@ jobs:
       - run: yarn install
       - run: echo "testing... FIX MY TESTS"
   hithere:
-    - checkout
-    - run: echo "hello finsihed after testing"
+    docker:
+      - image: circleci/node:8.9
+    steps:
+      - checkout
+      - run: echo "hello finsihed after testing"
 
 workflows:
   version: 2
